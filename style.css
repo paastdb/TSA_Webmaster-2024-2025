@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+@keyframes fade-up{
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+}
+  
+@keyframes fade-down{
+    0% {
+      opacity: 0;
+      transform: translateY(-30px) scale(0.9);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+}
+  
+@keyframes appear{
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+}
+  
+@view-transition {
+    navigation: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Indie Flower", serif;
+}
+
+body {
+    background-color: #568203;
+}
+
+.slide {
+    height: 100%;
+    width: 180px;
+    position: absolute;
+    background-color: #568203;
+    transition: 0.5s ease;
+    transform: translateX(-180px);
+}
+
+h1 {
+    color: #9DC209;
+    font-weight: 800;
+    text-align: left;
+    padding: 10px 0;
+    padding-left: 30px;
+    pointer-events: none;
+}
+
+h3 {
+    color: #9DC209;
+    font-weight: 800;
+    text-align: left;
+    padding: 10px 0;
+    padding-left: 30px;
+    pointer-events: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a {
+   color: #D1E231;
+   font-weight: 500;
+   padding: 5px 0;
+   display: block;
+   text-transform: capitalize;
+   text-decoration: none;
+   transition: 0.2s ease-out;
+}
+
+ul li:hover a{
+    color: #568203;
+    background-color: #9DC209;
+}
+
+ul li a i {
+   width: 40px;
+   text-align: center; 
+}
+
+input {
+   display: none;
+   visibility: hidden;
+}
+
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 1 15px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #568203;
+    box-shadow: 0 0 10px #000000;
+}
+
+.toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #9DC209;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top_line{
+   left: 2px;
+   top: 14px;
+   width: 25px;
+   transform: rotate(45deg); 
+}
+
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg); 
+ }
+
+ input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    transform: translateX(20px);
+ }
+
+ input:checked ~ .slide{
+    transform: translateX(0);
+    box-shadow: 0 0 15px #000000;
+ }
+
+ .appetizers{
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-up 0.5s;
+  }
+  
+  .appetizersimage1{
+    position: relative;
+  }
+  
+  .appetizerscontent1{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .appetizerscontent1:hover{
+    opacity: 1;
+  }
+  
+  .appetizerscontent1 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .appetizerscontent1 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .appetizerscontent1:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .appetizersimage2{
+    position: relative;
+  }
+  
+  .appetizerscontent2{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .appetizerscontent2:hover{
+    opacity: 1;
+  }
+  
+  .appetizerscontent2 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .appetizerscontent2 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .appetizerscontent2:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .appetizersimage3{
+    position: relative;
+  }
+  
+  .appetizerscontent3{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .appetizerscontent3:hover{
+    opacity: 1;
+  }
+  
+  .appetizerscontent3 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .appetizerscontent3 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .appetizerscontent3:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .soupandsalads{
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-up 0.5s;
+  }
+  
+  .soupandsaladsimage1{
+    position: relative;
+  }
+  
+  .soupandsaladscontent1{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .soupandsaladscontent1:hover{
+    opacity: 1;
+  }
+  
+  .soupandsaladscontent1 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .soupandsaladscontent1 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .soupandsaladscontent1:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .soupandsaladsimage2{
+    position: relative;
+  }
+  
+  .soupandsaladscontent2{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .soupandsaladscontent2:hover{
+    opacity: 1;
+  }
+  
+  .soupandsaladscontent2 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .soupandsaladscontent2 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .soupandsaladscontent2:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .soupandsaladsimage3{
+    position: relative;
+  }
+  
+  .soupandsaladscontent3{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .soupandsaladscontent3:hover{
+    opacity: 1;
+  }
+  
+  .soupandsaladscontent3 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .soupandsaladscontent3 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .soupandsaladscontent3:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .maindishes{
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-up 0.5s;
+  }
+  
+  .maindishesimage1{
+    position: relative;
+  }
+  
+  .maindishescontent1{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .maindishescontent1:hover{
+    opacity: 1;
+  }
+  
+  .maindishescontent1 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .maindishescontent1 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .maindishescontent1:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .maindishesimage2{
+    position: relative;
+  }
+  
+  .maindishescontent2{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .maindishescontent2:hover{
+    opacity: 1;
+  }
+  
+  .maindishescontent2 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .maindishescontent2 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .maindishescontent2:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .maindishesimage3{
+    position: relative;
+  }
+  
+  .maindishescontent3{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .maindishescontent3:hover{
+    opacity: 1;
+  }
+  
+  .maindishescontent3 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .maindishescontent3 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .maindishescontent3:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .desserts{
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-up 0.5s;
+  }
+  
+  .dessertsimage1{
+    position: relative;
+  }
+  
+  .dessertscontent1{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .dessertscontent1:hover{
+    opacity: 1;
+  }
+  
+  .dessertscontent1 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .dessertscontent1 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .dessertscontent1:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .dessertsimage2{
+    position: relative;
+  }
+  
+  .dessertscontent2{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .dessertscontent2:hover{
+    opacity: 1;
+  }
+  
+  .dessertscontent2 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .dessertscontent2 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .dessertscontent2:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .dessertsimage3{
+    position: relative;
+  }
+  
+  .dessertscontent3{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .dessertscontent3:hover{
+    opacity: 1;
+  }
+  
+  .dessertscontent3 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .dessertscontent3 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .dessertscontent3:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .drinks{
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-up 0.5s;
+  }
+  
+  .drinksimage1{
+    position: relative;
+  }
+  
+  .drinkscontent1{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .drinkscontent1:hover{
+    opacity: 1;
+  }
+  
+  .drinkscontent1 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .drinkscontent1 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .drinkscontent1:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .drinksimage2{
+    position: relative;
+  }
+  
+  .drinkscontent2{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .drinkscontent2:hover{
+    opacity: 1;
+  }
+  
+  .drinkscontent2 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .drinkscontent2 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .drinkscontent2:hover > *{
+    transform:translateY(0px);
+  }
+  
+  .drinksimage3{
+    position: relative;
+  }
+  
+  .drinkscontent3{
+    width: 96.2%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .drinkscontent3:hover{
+    opacity: 1;
+  }
+  
+  .drinkscontent3 p{
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .drinkscontent3 > *{
+    transform:translateY(25px);
+    transition: transform 0.6s;
+  }
+  
+  .drinkscontent3:hover > *{
+    transform:translateY(0px);
+  }
+  
