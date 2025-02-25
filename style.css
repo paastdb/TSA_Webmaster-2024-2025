@@ -39,6 +39,15 @@
     navigation: auto;
 }
 
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -48,6 +57,29 @@
 
 body {
     background-color: #568203;
+}
+
+footer{
+  background-color: #9DC209;
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 10px 30px 20px;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display:flex;
+  justify-content: center;
+}
+
+.footerBottom {
+  padding: 5px;
+  text-align: center;
 }
 
 .slide {
