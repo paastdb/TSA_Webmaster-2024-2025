@@ -1,20 +1,12 @@
 document.addEventListener("click", function (event) {
-    const screenWidth = window.innerWidth;
-    const clickX = event.clientX;
+    const leftButton = document.getElementById("next")
 
-    if (clickX < screenWidth / 2) {
+    if (leftButton) {
         activateLeftButton();
-    } else {
-        activateRightButton();
     }
 });
 
 function activateLeftButton() {
-    const leftButton = document.getElementById("prev");
+    const leftButton = document.getElementById("next");
     if (leftButton) leftButton.click();
-}
-
-function activateRightButton() {
-    const rightButton = document.getElementById("next");
-    if (rightButton) rightButton.click();
 }

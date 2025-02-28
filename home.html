@@ -8,6 +8,9 @@
         <title>Home</title>
 
         <style>
+            p {
+                color: #D1E231;
+            }
             h5 {
                 color: #9DC209;
                 font-size: 50px;
@@ -17,12 +20,12 @@
                 padding-bottom: 15px;
                 animation: fade-up 0.5s;
             }
-            p {
+            h6 {
                 color: #D1E231;
                 font-size: 25px;
                 text-align: center;
                 padding-bottom: 35px;
-                animation: fade-up 0.5s; 
+                animation: fade-up 0.5s;  
             }
             .home-buttons {
                 position: relative;
@@ -45,6 +48,30 @@
             }
             button:hover{
                 color: #000000;
+            }
+            footer{
+                background-color: #9DC209;
+            }
+              
+            .footerContainer {
+                width: 100%;
+                height: 15%;
+                position: fixed;      
+                bottom: 0; 
+            }
+              
+            .footerNav {
+                margin: 30px 0;
+            }
+              
+            .footerNav ul {
+                display:flex;
+                justify-content: center;
+            }
+              
+            .footerBottom {
+                padding: 5px;
+                text-align: center;
             }
         </style>
     </head>
@@ -71,9 +98,9 @@
         </label>
 
         <h5>"Delicious, Fresh, Daily"</h5>
-        <p>At NewSeeds, we're passionate about creating delicious plant-based</p>
-        <p>meals that are fresh and sustainable. Our ingredients are </p>
-        <p>locally sourced, and every dish is crafted with care.</p>
+        <h6>At NewSeeds, we're passionate about creating delicious plant-based</h6>
+        <h6>meals that are fresh and sustainable. Our ingredients are </h6>
+        <h6>locally sourced, and every dish is crafted with care.</h6>
 
         <div class="home-buttons">
             <a href="contact.html">
@@ -83,6 +110,23 @@
                 <button id="menu">Menu</button> 
             </a>
         </div>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                        <li><a href="menu.html"><i class="fas fa-cart-plus"></i></a></li>
+                        <li><a href="process.html"><i class="fas fa-truck"></i></a></li>
+                        <li><a href="contact.html"><i class="fas fa-comments"></i></a></li>
+                        <li><a href="refrences.html"><i class="fas fa-clipboard"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footerBottom">
+                    <p>Copyright &copy;2025</p>
+                </div>
+            </div>
+        </footer>
 
     </body>
 </html>
